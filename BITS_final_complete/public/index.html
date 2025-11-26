@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechStore — Home</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="brand">TechStore</div>
+
+      <div class="search">
+        <input id="search-input" placeholder="Search products..." />
+      </div>
+
+      <div class="nav-right">
+        <a href="cart.html" class="link">
+          Cart (<span id="cart-count">0</span>)
+        </a>
+        <span id="user-name">Guest</span>
+        <a id="goLogin" href="login.html" class="btn">Login</a>
+        <button id="logoutBtn" class="btn" style="display:none;">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO BLOCK -->
+  <header class="hero">
+    <h1>Premium tech, delivered fast.</h1>
+    <p>Smartphones • Laptops • Accessories • 24/7 Support</p>
+    <a href="#products" class="cta">Shop Now</a>
+  </header>
+
+  <!-- PRODUCT GRID -->
+  <main class="container">
+    <section id="products">
+      <h2>Recommended Products</h2>
+      <div id="products-grid" class="products-grid"></div>
+    </section>
+  </main>
+
+  <!-- CHATBOT BUTTON -->
+  <button id="chatbot-toggle" class="chatbot-toggle">💬</button>
+
+  <!-- CHATBOT UI -->
+  <div class="chatbot-container collapsed" id="chatbot-box">
+    <div class="chatbot-header">
+      <span>Support Assistant</span>
+      <button id="chatbot-close">✕</button>
+    </div>
+
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+
+    <div class="chatbot-input">
+      <input id="chatbot-input" placeholder="Ask something..." />
+      <button id="chatbot-send">Send</button>
+      <button id="voice-btn" title="Voice Input">🎤</button>
+    </div>
+  </div>
+
+  <!-- FIREBASE -->
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="js/script.js"></script>
+
+</body>
+</html>
